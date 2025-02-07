@@ -1,75 +1,59 @@
-/* style.css */
-body {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
+.navbar-brand{
+  font-weight: 500;
+  color: #009970;
+  font-size: 24px;
+  transition: .3s color;
+
 }
 
-header {
-  padding: 20px 0;
-  background-color: #f0f0f0; /* Example */
+
+
+
+
+
+
+
+.navbar-toggler{
+  border:none;
+  font-size: 1.25rem;
+}
+.navbar-toggler:focus,.btn-close:focus{
+  box-shadow: none;
+  outline: none;
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: space-around; /* Or space-between */
+.nav-link{
+  color: #666777;
+  font-weight: 500;
+  position: relative;
+}
+ .nav-link:hover{
+   color: black;
+ }
+@media (min-width: 991px) {
+  .nav-link:before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width:0;
+    height: 2px;
+    background-color: #009970;
+    visibility: hidden;
+    transition: .3s ease-in-out;
+
+  }
+
+  .nav-link:hover::before, .nav-link.active::before{
+    width: 100%;
+    visibility: visible;
+  }
 }
 
-nav li {
-  margin: 0 10px;
+.hero-section{
+  background: url("img/image2.png") no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
 }
-
-nav a {
-  text-decoration: none;
-  color: #333;
-}
-
-.hero {
-  text-align: left;
-  padding: 100px 0;
-}
-
-.hero h1 {
-  font-size: 3em;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 1.2em;
-  margin-bottom: 30px;
-}
-
-.hero button {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #f0f0f0;
-}
-/* إضافة الأنماط لعلامة Facebook داخل الدائرة الحمراء */
-.facebook-icon {
-  background-color: red; /* خلفية حمراء */
-  border-radius: 50%; /* جعلها دائرة */
-  padding: 12px; /* المسافة داخل الدائرة */
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.facebook-icon i {
-  color: white; /* لون الأيقونة يصبح أبيض */
-  font-size: 24px; /* حجم الأيقونة */
-}
-
-/* يمكنك إضافة أي أنماط إضافية هنا */
-
-/* You will likely need more specific styles here to match the image */
