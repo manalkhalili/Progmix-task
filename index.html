@@ -11,34 +11,40 @@
    <link rel="stylesheet" href="css/grids.css">
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 </head>
 <body>
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg fixed-top">
-  <div class="container">
+  <div class="container d-flex justify-content-between align-items-center">
+    <!-- Logo -->
     <a class="navbar-brand me-auto" href="#">
       <img src="/img/logo1.png" alt="Logo" height="40">
     </a>
+
+    <!-- Toggle Button for Mobile View -->
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
 
+    <!-- Offcanvas Menu -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Logo</h5>
+        <img src="/img/logo1.png" alt="Logo" height="40">
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
+        <!-- Navbar Links -->
         <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
           <li class="nav-item">
-            <a class="nav-link mx-lg-2 " aria-current="page" href="#">About Us</a>
+            <a class="nav-link mx-lg-2" aria-current="page" href="#">About Us</a>
           </li>
           <li class="nav-item">
             <a class="nav-link mx-lg-2" href="#">Our Portfolio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link mx-lg-2" href="#">team</a>
+            <a class="nav-link mx-lg-2" href="#">Team</a>
           </li>
           <li class="nav-item">
             <a class="nav-link mx-lg-2" href="#">Services</a>
@@ -50,9 +56,24 @@
             <a class="nav-link mx-lg-2" href="#">Contact Us</a>
           </li>
         </ul>
+
+        <!-- Social media icons -->
+        <div class="social-icons d-flex justify-content-end mt-3">
+          <a href="https://www.facebook.com" class="mx-2" target="_blank">
+            <img src="/img/facebook.png" alt="Facebook" class="social-icon">
+          </a>
+          <a href="https://www.instagram.com" class="mx-2" target="_blank">
+            <img src="/img/instgram.png" alt="Instagram" class="social-icon">
+          </a>
+          <a href="https://twitter.com" class="mx-2" target="_blank">
+            <img src="/img/X.png" alt="Twitter" class="social-icon">
+          </a>
+          <a href="https://www.linkedin.com" class="mx-2" target="_blank">
+            <img src="/img/linkedin.png" alt="LinkedIn" class="social-icon">
+          </a>
+        </div>
       </div>
     </div>
-
   </div>
 </nav>
 
@@ -63,12 +84,14 @@
 <!-- Hero Section-->
 <section class="hero-section">
   <div class="hero-content">
-    <h1> Creative Visual </h1>
-    <h1>Design Agency</h1>
+    <div class="hero-text">
+      <h1><span class="highlight">Creative</span> Visual</h1>
+      <h1>Design Agency</h1>
     <p>We bring to life the most complex projects, specialize in online
       booking systems and the creation of aggregator sites. We craft
       brands, websites, products, and pretty much anything.</p>
     <a href="#" class="btn">Let's Discuss</a>
+  </div>
   </div>
 </section>
 
