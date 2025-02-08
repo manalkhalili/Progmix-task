@@ -15,70 +15,48 @@
 
 </head>
 <body>
-<!-- Navbar -->
+
+<!-- Navbar start -->
 <nav class="navbar navbar-expand-lg fixed-top">
-  <div class="container d-flex justify-content-between align-items-center">
+  <div class="container-fluid d-flex justify-content-between align-items-center">
     <!-- Logo -->
     <a class="navbar-brand me-auto" href="#">
       <img src="/img/logo1.png" alt="Logo" height="40">
     </a>
 
-    <!-- Toggle Button for Mobile View -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+    <!-- Toggle Button for Mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- Offcanvas Menu -->
+    <!-- Navbar Content -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <div class="offcanvas-header">
         <img src="/img/logo1.png" alt="Logo" height="40">
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
-        <!-- Navbar Links -->
-        <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
-          <li class="nav-item">
-            <a class="nav-link mx-lg-2" aria-current="page" href="#">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link mx-lg-2" href="#">Our Portfolio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link mx-lg-2" href="#">Team</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link mx-lg-2" href="#">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link mx-lg-2" href="#">Packages</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link mx-lg-2" href="#">Contact Us</a>
-          </li>
+        <ul class="navbar-nav mx-auto d-flex align-items-center">
+          <li class="nav-item"><a class="nav-link px-3" href="#">About Us</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#">Our Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#">Team</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#">Services</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#">Packages</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#">Contact Us</a></li>
         </ul>
 
-        <!-- Social media icons -->
-        <div class="social-icons d-flex justify-content-end mt-3">
-          <a href="https://www.facebook.com" class="mx-2" target="_blank">
-            <img src="/img/facebook.png" alt="Facebook" class="social-icon">
-          </a>
-          <a href="https://www.instagram.com" class="mx-2" target="_blank">
-            <img src="/img/instgram.png" alt="Instagram" class="social-icon">
-          </a>
-          <a href="https://twitter.com" class="mx-2" target="_blank">
-            <img src="/img/X.png" alt="Twitter" class="social-icon">
-          </a>
-          <a href="https://www.linkedin.com" class="mx-2" target="_blank">
-            <img src="/img/linkedin.png" alt="LinkedIn" class="social-icon">
-          </a>
+        <!-- Social Media Icons -->
+        <div class="social-icons d-flex">
+          <a href="https://www.facebook.com" target="_blank"><img src="/img/facebook.png" alt="Facebook" class="social-icon"></a>
+          <a href="https://www.instagram.com" target="_blank"><img src="/img/instgram.png" alt="Instagram" class="social-icon"></a>
+          <a href="https://twitter.com" target="_blank"><img src="/img/X.png" alt="Twitter" class="social-icon"></a>
+          <a href="https://www.linkedin.com" target="_blank"><img src="/img/linkedin.png" alt="LinkedIn" class="social-icon"></a>
         </div>
       </div>
     </div>
   </div>
 </nav>
-
 <!-- End Navbar -->
-
 
 
 <!-- Hero Section-->
@@ -87,19 +65,48 @@
     <div class="hero-text">
       <h1><span class="highlight">Creative</span> Visual</h1>
       <h1>Design Agency</h1>
-    <p>We bring to life the most complex projects, specialize in online
-      booking systems and the creation of aggregator sites. We craft
-      brands, websites, products, and pretty much anything.</p>
-    <a href="#" class="btn">Let's Discuss</a>
+      <p>We bring to life the most complex projects, specialize in online
+        booking systems and the creation of aggregator sites. We craft
+        brands, websites, products, and pretty much anything.</p>
+      <a href="#" class="btn">Let's Discuss</a>
+    </div>
   </div>
+</section>
+<!--  End Hero Section-->
+
+
+<!--video&text section start-->
+<section class="video-section container py-5 text-center">
+  <div class="row align-items-center">
+    <!-- text -->
+    <div class="col-md-6 text-start">
+      <p>Let's build  success story together</p>
+      <h2>We Build Your Success On the Internet</h2>
+      <p>  We help ambitious businesses like yours generate more profits by building awareness,
+        driving web traffic, and connecting with customers growing.
+      </p>
+      <p>
+        We help ambitious businesses like yours generate more profits by building awareness,
+        driving web traffic, and connecting with customers growing.
+      </p>
+    </div>
+    <!-- video -->
+    <div class="col-md-6">
+      <a href="https://www.youtube.com/watch?v=6yNnwqjPtYA" class="video-popup">
+
+      </a>
+
+    </div>
   </div>
 </section>
 
+<!--video&text section end -->
 
 
 
 
-<!--  End Hero Section-->
+
+
 
 
 <!-- Botsrap js -->
