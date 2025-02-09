@@ -1,5 +1,6 @@
 * {
   font-family: 'Unbounded', sans-serif !important;
+
 }
 .navbar {
   background-color: #fff;
@@ -134,7 +135,7 @@ margin-bottom: 18px;
   color: #ddd;
 }
 
-/* زر */
+
 .hero-text .btn {
   background-color: #e63946;
   color: white !important;
@@ -154,4 +155,148 @@ margin-bottom: 18px;
 .btn:hover {
   background-color: #c72e3d;
   transform: scale(1.05);
+}
+
+/* video&text */
+.video-section {
+  background-color: #534C75;
+  padding: 60px 0;
+  color: #fff;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  text-align: right;
+}
+
+.col-md-6 {
+  padding-left: 20px; /* إضافة مسافة من اليسار */
+  padding-right: 20px; /* إضافة مسافة من اليمين */
+}
+
+.circle-text {
+  position: relative;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.circle-text::before {
+  left: 2%;
+}
+
+.circle-text::after {
+  right: 53%;
+}
+
+.circle-text::before,
+.circle-text::after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.video-section h3 {
+  font-size: 3rem;
+  font-weight: normal;
+  color: #fff;
+}
+
+.video-section p {
+  font-size: .8rem;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+.video-thumbnail {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform .3s ease-in-out;
+}
+
+.video-thumbnail:hover {
+  transform: scale(1.05);
+}
+
+.play-btn {
+  font-size: 2rem;
+  color: #fff;
+  background: rgba(0,0,0,0.5);
+  border: none;
+  border-radius: 50%;
+  padding: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.play-btn:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+/* تنسيق قسم الإحصائيات ليكون مطابقًا للصورة */
+.stats-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  width: 80%;
+  margin: 50px auto;
+  padding: 20px 0;
+}
+
+.stats-item {
+  flex: 1;
+  color: #fff;
+  text-align: center;
+}
+
+.stats-item h3 {
+  color: #EB434A;
+  font-size: 4rem; /* تكبير حجم الأرقام */
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.stats-item p {
+  color: #fff;
+  font-size: 1.2rem; /* تكبير حجم النصوص أسفل الأرقام */
+  font-weight: normal;
+}
+
+/* ضبط الفواصل العمودية بين العناصر */
+.stats-item:not(:last-child) {
+  border-right: 2px solid rgba(255, 255, 255, 0.5); /* جعل الخط أرق وأخف */
+  padding-right: 50px; /* إضافة تباعد مناسب */
+}
+
+.stats-item:not(:first-child) {
+  padding-left: 50px; /* إضافة تباعد من الجهة اليسرى للعناصر بعد الأول */
+}
+
+.row.mt-5 div {
+  color: #fff;
+  text-align: center;
+}
+
+.row.mt-5 h3 {
+  color: #EB434A;
+  font-size: 3rem;
+  font-weight: normal;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col-md-4 {
+  padding: 10px;
+}
+
+.row > .col-md-4:not(:last-child) {
+  border-right: 1px solid #fff;
 }

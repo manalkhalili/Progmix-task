@@ -3,15 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>web craft agency</title>
+  <title>Web Craft Agency</title>
 
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
         crossorigin="anonymous">
-   <link rel="stylesheet" href="css/grids.css">
+
+  <link rel="stylesheet" href="css/grids.css">
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
 
 </head>
 <body>
@@ -74,42 +77,81 @@
 </section>
 <!--  End Hero Section-->
 
-
-<!--video&text section start-->
+<!-- Video & Text Section Start -->
 <section class="video-section container py-5 text-center">
   <div class="row align-items-center">
-    <!-- text -->
+    <!-- Text -->
     <div class="col-md-6 text-start">
-      <p>Let's build  success story together</p>
-      <h2>We Build Your Success On the Internet</h2>
-      <p>  We help ambitious businesses like yours generate more profits by building awareness,
-        driving web traffic, and connecting with customers growing.
-      </p>
-      <p>
-        We help ambitious businesses like yours generate more profits by building awareness,
+      <p class="circle-text">Let's build success story together</p>
+      <h3>We Build Your </h3>
+      <h3>Success On</h3>
+      <h3>the Internet</h3>
+
+      <p>We help ambitious businesses like yours generate more profits by building awareness,
         driving web traffic, and connecting with customers growing.
       </p>
     </div>
-    <!-- video -->
+
+    <!-- Video -->
     <div class="col-md-6">
       <a href="https://www.youtube.com/watch?v=6yNnwqjPtYA" class="video-popup">
-
+        <div class="video-thumbnail position-relative">
+          <img src="img/shopify.png" alt="Video Thumbnail" class="img-fluid rounded">
+          <button class="play-btn position-absolute top-50 start-50 translate-middle"></button>
+        </div>
       </a>
-
     </div>
   </div>
+
+  <!-- Statistics -->
+  <div class="row mt-5">
+    <div class="col-md-4">
+      <h3>25+</h3>
+      <p>Innovators Team Members</p>
+    </div>
+    <div class="col-md-4">
+      <h3>5+</h3>
+      <p>Happy Clients</p>
+    </div>
+    <div class="col-md-4">
+      <h3>10+</h3>
+      <p>Years Of Experience</p>
+    </div>
+  </div>
+
 </section>
+<!-- Video & Text Section End -->
 
-<!--video&text section end -->
+<!-- jQuery and Magnific Popup JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 
+<!-- Magnific Popup Script -->
+<script>
+  $(document).ready(function() {
+    $('.video-popup').magnificPopup({
+      type: 'iframe',
+      mainClass: 'mfp-fade',
+      removalDelay: 300,
+      preloader: false,
+      fixedContentPos: false,
+      iframe: {
+        patterns: {
+          youtube: {
+            index: 'youtube.com/',
+            id: function(url) {
+              var match = url.match(/[\\?\\&]v=([^\\?\\&]+)/);
+              return match && match[1] ? match[1] : null;
+            },
+            src: 'https://www.youtube.com/embed/%id%?autoplay=1'
+          }
+        }
+      }
+    });
+  });
+</script>
 
-
-
-
-
-
-
-<!-- Botsrap js -->
+<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
