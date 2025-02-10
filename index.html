@@ -15,6 +15,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+
 
 </head>
 <body>
@@ -40,12 +42,12 @@
       </div>
       <div class="offcanvas-body">
         <ul class="navbar-nav mx-auto d-flex align-items-center">
-          <li class="nav-item"><a class="nav-link px-3" href="#">About Us</a></li>
-          <li class="nav-item"><a class="nav-link px-3" href="#">Our Portfolio</a></li>
-          <li class="nav-item"><a class="nav-link px-3" href="#">Team</a></li>
-          <li class="nav-item"><a class="nav-link px-3" href="#">Services</a></li>
-          <li class="nav-item"><a class="nav-link px-3" href="#">Packages</a></li>
-          <li class="nav-item"><a class="nav-link px-3" href="#">Contact Us</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#about">About Us</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#portfolio">Our Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#team">Team</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#packages">Packages</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#contact">Contact Us</a></li>
         </ul>
 
         <!-- Social Media Icons -->
@@ -62,7 +64,7 @@
 <!-- End Navbar -->
 
 
-<!-- Hero Section-->
+<!-- Hero Section -->
 <section class="hero-section">
   <div class="hero-content">
     <div class="hero-text">
@@ -75,24 +77,17 @@
     </div>
   </div>
 </section>
-<!--  End Hero Section-->
+<!-- End Hero Section -->
 
-<!-- Video & Text Section Start -->
+<!-- Video & Text Section -->
 <section class="video-section container py-5 text-center">
   <div class="row align-items-center">
-    <!-- Text -->
     <div class="col-md-6 text-start">
       <p class="circle-text">Let's build success story together</p>
-      <h3>We Build Your </h3>
-      <h3>Success On</h3>
-      <h3>the Internet</h3>
-
+      <h3>We Build Your Success On the Internet</h3>
       <p>We help ambitious businesses like yours generate more profits by building awareness,
-        driving web traffic, and connecting with customers growing.
-      </p>
+        driving web traffic, and connecting with customers growing.</p>
     </div>
-
-    <!-- Video -->
     <div class="col-md-6">
       <a href="https://www.youtube.com/watch?v=6yNnwqjPtYA" class="video-popup">
         <div class="video-thumbnail position-relative">
@@ -103,7 +98,6 @@
     </div>
   </div>
 
-  <!-- Statistics -->
   <div class="row mt-5">
     <div class="col-md-4">
       <h3>25+</h3>
@@ -118,15 +112,137 @@
       <p>Years Of Experience</p>
     </div>
   </div>
-
 </section>
-<!-- Video & Text Section End -->
+<!-- End Video & Text Section -->
+
+<!-- Why Web Crafts
+<section class="why-webcrafts">
+  <p class="small-heading">WEBCRAFTS</p>
+  <h2>Why Web Crafts?</h2>
+  <p class="description">We help ambitious businesses like yours generate more profits by building awareness, driving web traffic, and connecting with customers growing.</p>
+
+  <div class="logo-wrapper">
+    <img src="/img/logo.png" alt="Main Logo" class="main-logo">
+    <div class="features-container">
+      <div class="features features-left">
+        <div class="feature">
+          <div class="icon-circle">
+            <img src="/img/success.png" alt="Success Icon">
+          </div>
+          <div class="text">
+            <h3>A Track Record Of Success</h3>
+            <p>Successful Shopify launches across various industries.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="icon-circle">
+            <img src="/img/strategic.png" alt="Strategy Icon">
+          </div>
+          <div class="text">
+            <h3>Strategic Approach</h3>
+            <p>Get high rankings with multi-team collaboration to optimize SEO.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="icon-circle">
+            <img src="/img/unique.png" alt="Unique Design Icon">
+          </div>
+          <div class="text">
+            <h3>Unique Design</h3>
+            <p>Delivering unique designs tailored for your business needs.</p>
+          </div>
+        </div>
+      </div>
+      <div class="features features-right">
+        <div class="feature">
+          <div class="icon-circle">
+            <img src="/img/responsive.png" alt="Responsive Design Icon">
+          </div>
+          <div class="text">
+            <h3>Responsive Design</h3>
+            <p>Ensuring seamless experience across all devices.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="icon-circle">
+            <img src="/img/support.png" alt="Support Icon">
+          </div>
+          <div class="text">
+            <h3>Continuous Support</h3>
+            <p>Providing ongoing support for continuous improvement.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="icon-circle">
+            <img src="/img/improvement.png" alt="Improvement Icon">
+          </div>
+          <div class="text">
+            <h3>Continuous Improvement</h3>
+            <p>Striving for excellence with ongoing enhancements.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+End Why Web Crafts -->
+
+<!-- Portfolio Section -->
+
+<section class="custom-portfolio">
+  <!-- First Row -->
+  <div class="portfolio-section">
+    <div class="custom-text">This is text in the first section</div>
+    <button class="custom-button">Click Me</button>
+  </div>
+
+  <!-- Second Row: Swiper -->
+  <div class="swiper-container">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="/img/8.jpg.jpg" alt="Image 1">
+          <h4 class="card-title-bottom">Card Title 1</h4>
+        </div>
+
+        <div class="swiper-slide">
+          <img src="/img/9.jpg.jpg" alt="Image 2">
+          <h4 class="card-title-bottom">Card Title 2</h4>
+        </div>
+
+        <div class="swiper-slide">
+          <img src="/img/8.jpg.jpg" alt="Image 3">
+          <h4 class="card-title-bottom">Card Title 3</h4>
+        </div>
+
+        <div class="swiper-slide">
+          <img src="/img/9.jpg.jpg" alt="Image 4">
+          <h4 class="card-title-bottom">Card Title 4</h4>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third Row: Navigation Buttons -->
+    <div class="custom-controls">
+      <button class="swiper-button-prev">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="swiper-button-next">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+
+<!--port end-->
+
 
 <!-- jQuery and Magnific Popup JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-
-<!-- Magnific Popup Script -->
+<!-- swiper-->
 <script>
   $(document).ready(function() {
     $('.video-popup').magnificPopup({
@@ -140,7 +256,7 @@
           youtube: {
             index: 'youtube.com/',
             id: function(url) {
-              var match = url.match(/[\\?\\&]v=([^\\?\\&]+)/);
+              var match = url.match(/[\?\&]v=([^\?\&]+)/);
               return match && match[1] ? match[1] : null;
             },
             src: 'https://www.youtube.com/embed/%id%?autoplay=1'
@@ -151,9 +267,23 @@
   });
 </script>
 
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
+
+
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+
 </body>
 </html>
