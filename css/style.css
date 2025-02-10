@@ -302,6 +302,8 @@ margin-bottom: 18px;
 }
 
 /*webcrafts*/
+
+
 .why-webcrafts {
   text-align: center;
   padding: 50px 20px;
@@ -412,11 +414,12 @@ margin-bottom: 18px;
 }
 /*scroller*/
 
+
 .custom-portfolio {
-  background-color: #2C2C54;
   padding: 80px 20px;
   text-align: center;
   position: relative;
+  color: #fff;
 }
 
 .portfolio-section {
@@ -425,21 +428,74 @@ margin-bottom: 18px;
   padding: 60px 20px;
 }
 
-.portfolio-section h2 {
-  font-size: 38px;
-  color: #fff;
-  margin-bottom: 15px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+.small-text {
+  font-size: 10px;
+  text-align: left;
+  color: white;
+  position: relative;
+  font-weight: normal;
+  margin-bottom: 10px;
 }
 
-.portfolio-section p {
-  font-size: 18px;
-  margin-bottom: 35px;
-  color: #ddd;
-  max-width: 800px;
+
+.small-text span {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: white;
+  top: 50%;
+}
+
+.small-text span:first-child {
+  left: -2%;
+  transform: translateY(-50%);
+}
+
+.small-text span:last-child {
+  right: 77%;
+  transform: translateY(-50%);
+}
+
+.portfolio-title {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.text-button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
   margin: auto;
+  padding-left: 0;
+}
+
+.custom-text {
+  font-size: 14px;
+  margin-bottom: 35px;
   line-height: 1.6;
+  text-align: left;
+  max-width: 800px;
+  margin-right: auto;
+  font-weight: normal;
+}
+
+.custom-button {
+  background: rgba(30, 30, 70, 0.7);
+  border: 1px solid white;
+  padding: 10px 20px;
+  color: white;
+  font-size: 10px;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+.custom-button:hover {
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .swiper {
@@ -476,11 +532,10 @@ margin-bottom: 18px;
 
 .card-title-bottom {
   font-size: 20px;
-  color: #fff;
-  font-weight: bold;
+  font-weight: normal; /* Removed bold */
   text-align: left;
   width: 100%;
-  padding-left: 10px;
+  padding-left: 11%; /* Ensures title aligns exactly with image edge */
   margin-top: 5px;
 }
 
@@ -497,6 +552,7 @@ margin-bottom: 18px;
   align-items: center;
   width: 55px;
   height: 55px;
+  position: relative;
 }
 
 .swiper-button-next:hover,
@@ -510,24 +566,7 @@ margin-bottom: 18px;
   align-items: center;
   gap: 20px;
   margin-top: 40px;
-  justify-content: flex-start;
-  position: absolute;
-  left: 50px;
-  bottom: 20px;
-  z-index: 10;
+  justify-content: center;
+  position: relative;
 }
 
-.custom-controls .swiper-button-prev,
-.custom-controls .swiper-button-next {
-  position: static;
-  background-color: rgba(255, 255, 255, 0.2);
-  border: 2px solid white;
-  padding: 15px;
-  border-radius: 50%;
-}
-
-.custom-controls .swiper-button-prev i,
-.custom-controls .swiper-button-next i {
-  color: white;
-  font-size: 24px;
-}
