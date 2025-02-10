@@ -538,9 +538,18 @@ margin-bottom: 18px;
   padding-left: 11%; /* Ensures title aligns exactly with image edge */
   margin-top: 5px;
 }
+.custom-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* محاذاة الأزرار إلى اليسار */
+  gap: 10px; /* لا يوجد فراغ بين الأزرار */
+  margin-top: 40px;
+  position: relative;
+}
 
-.swiper-button-next,
-.swiper-button-prev {
+.swiper-button-prev,
+.swiper-button-next {
+  position: static !important;
   color: #fff !important;
   background: transparent;
   border: 2px solid white;
@@ -552,8 +561,10 @@ margin-bottom: 18px;
   align-items: center;
   width: 55px;
   height: 55px;
-  position: relative;
+  margin: 0;
 }
+
+
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
@@ -561,12 +572,13 @@ margin-bottom: 18px;
   transform: scale(1.1);
 }
 
-.custom-controls {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  margin-top: 40px;
-  justify-content: center;
-  position: relative;
+.custom-controls::after {
+  content: "";
+  position: absolute;
+  left: 15%;
+  bottom:80%;
+  width: 100vw;
+  height: .5px;
+  background-color: white;
 }
 
