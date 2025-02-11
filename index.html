@@ -16,6 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
 
 </head>
@@ -233,14 +234,14 @@ End Why Web Crafts -->
 
   <!-- Third Row: Navigation Buttons -->
   <div class="custom-controls">
-    <button class="swiper-button-prev">
-      <i class="fas fa-chevron-left"></i>
+    <button class="button-arrow">
+      <img src="/img/arrow2.png" alt="Previous">
     </button>
-    <button class="swiper-button-next">
-      <i class="fas fa-chevron-right"></i>
+    <button class="button-arrow">
+      <img src="/img/arrow1.png" alt="Next">
     </button>
-
   </div>
+
 </section>
 
 <!--port end-->
@@ -273,18 +274,29 @@ End Why Web Crafts -->
     });
   });
 </script>
-
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 <script>
-  var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 3,
-    spaceBetween: 20,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
+// تهيئة Swiper
+var swiper = new Swiper(".mySwiper", {
+slidesPerView: 3,
+spaceBetween: 30,
+navigation: {
+nextEl: ".swiper-button-next", // استخدم الأزرار الخاصة بـSwiper بشكل افتراضي
+prevEl: ".swiper-button-prev",
+},
+});
+
+// ربط الأزرار الخاصة بك للتحكم بالسلايدر
+document.querySelector('.button-arrow:first-of-type').addEventListener('click', function() {
+swiper.slidePrev();  // الانتقال إلى الشريحة السابقة
+});
+
+document.querySelector('.button-arrow:last-of-type').addEventListener('click', function() {
+swiper.slideNext();  // الانتقال إلى الشريحة التالية
+});
 </script>
+
 
 
 <!-- Bootstrap JS -->

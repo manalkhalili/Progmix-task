@@ -437,7 +437,6 @@ margin-bottom: 18px;
   margin-bottom: 10px;
 }
 
-
 .small-text span {
   position: absolute;
   width: 8px;
@@ -532,20 +531,23 @@ margin-bottom: 18px;
 
 .card-title-bottom {
   font-size: 20px;
-  font-weight: normal; /* Removed bold */
+  font-weight: normal;
   text-align: left;
   width: 100%;
-  padding-left: 11%; /* Ensures title aligns exactly with image edge */
+  padding-left: 11%;
   margin-top: 5px;
 }
+
 .custom-controls {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* محاذاة الأزرار إلى اليسار */
-  gap: 10px; /* لا يوجد فراغ بين الأزرار */
+  justify-content: flex-start;  /* جعل الأزرار تكون أقرب إلى اليسار */
+  gap: 10px;  /* المسافة بين الأزرار */
   margin-top: 40px;
   position: relative;
+  padding-left: 7%;  /* تقليل المسافة من اليسار لجعل الأزرار أقرب */
 }
+
 
 .swiper-button-prev,
 .swiper-button-next {
@@ -559,12 +561,10 @@ margin-bottom: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 55px;
-  height: 55px;
+  width: 50px;
+  height: 50px;
   margin: 0;
 }
-
-
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
@@ -575,10 +575,41 @@ margin-bottom: 18px;
 .custom-controls::after {
   content: "";
   position: absolute;
-  left: 15%;
-  bottom:80%;
-  width: 100vw;
-  height: .5px;
+  left: 20%;
+  top: 50%;
+  width: 100%;
+  height: 1px;
   background-color: white;
 }
 
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none !important;
+}
+
+.button-arrow {
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 50% !important;
+  border: 1px solid white !important;
+  background: transparent !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease-in-out !important;
+  overflow: hidden !important; /* لضمان أن الصورة لا تخرج عن الدائرة */
+  padding: 0 !important;
+}
+
+.button-arrow img {
+  width: 60% !important; /* تصغير الصورة لتناسب الدائرة */
+  height: auto !important;
+  transition: transform 0.3s ease-in-out !important;
+}
+
+
+
+.button-arrow:hover img {
+  transform: scale(1.1) !important; /* تكبير السهم قليلاً عند التحويم */
+}
