@@ -424,7 +424,7 @@ margin-bottom: 18px;
 
 .portfolio-section {
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto; /* تأكد من المركز التام */
   padding: 60px 20px;
 }
 
@@ -468,8 +468,8 @@ margin-bottom: 18px;
   justify-content: space-between;
   align-items: center;
   max-width: 1200px;
-  margin: auto;
-  padding-left: 0;
+  margin: 0 auto; /* تأكد من المركز التام */
+  padding-left: 10%;
 }
 
 .custom-text {
@@ -500,13 +500,14 @@ margin-bottom: 18px;
 .swiper {
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto; /* تأكد من المركز التام */
   padding: 50px 0;
 }
 
 .swiper-wrapper {
   display: flex;
   align-items: center;
+  justify-content: space-between; /* تأكد من توزيع العناصر بالتساوي */
 }
 
 .swiper-slide {
@@ -515,6 +516,7 @@ margin-bottom: 18px;
   align-items: flex-start;
   justify-content: center;
   margin-bottom: 35px;
+  margin-left: 0 !important; /* إزالة الهامش الذي قد يسبب الفراغ */
 }
 
 .swiper-slide img {
@@ -534,18 +536,31 @@ margin-bottom: 18px;
   font-weight: normal;
   text-align: left;
   width: 100%;
-  padding-left: 11%;
+  padding-left: 5%;
   margin-top: 5px;
 }
 
 .custom-controls {
   display: flex;
   align-items: center;
-  justify-content: flex-start;  /* جعل الأزرار تكون أقرب إلى اليسار */
-  gap: 10px;  /* المسافة بين الأزرار */
+  justify-content: flex-start;
+  gap: 15px;
   margin-top: 40px;
   position: relative;
-  padding-left: 7%;  /* تقليل المسافة من اليسار لجعل الأزرار أقرب */
+  padding-left: 5%;
+  width: 100%;
+}
+
+.custom-controls::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  right: 0; /* تقليل المسافة من اليمين */
+  height: 1px;
+  background-color: white;
+  transform: translateY(-50%);
+  z-index: 50;
 }
 
 
@@ -554,7 +569,7 @@ margin-bottom: 18px;
   position: static !important;
   color: #fff !important;
   background: transparent;
-  border: 2px solid white;
+  border: 1px solid white;
   padding: 15px;
   border-radius: 50%;
   transition: background 0.3s, transform 0.2s;
@@ -572,15 +587,7 @@ margin-bottom: 18px;
   transform: scale(1.1);
 }
 
-.custom-controls::after {
-  content: "";
-  position: absolute;
-  left: 20%;
-  top: 50%;
-  width: 100%;
-  height: 1px;
-  background-color: white;
-}
+
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
@@ -598,12 +605,12 @@ margin-bottom: 18px;
   justify-content: center !important;
   cursor: pointer !important;
   transition: all 0.3s ease-in-out !important;
-  overflow: hidden !important; /* لضمان أن الصورة لا تخرج عن الدائرة */
+  overflow: hidden !important;
   padding: 0 !important;
 }
 
 .button-arrow img {
-  width: 60% !important; /* تصغير الصورة لتناسب الدائرة */
+  width: 60% !important;
   height: auto !important;
   transition: transform 0.3s ease-in-out !important;
 }
@@ -611,5 +618,355 @@ margin-bottom: 18px;
 
 
 .button-arrow:hover img {
-  transform: scale(1.1) !important; /* تكبير السهم قليلاً عند التحويم */
+  transform: scale(1.1) !important;
 }
+
+
+/*business-plan*/
+
+/* تصميم القسم الرئيسي */
+.business-plan {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.business-plan-header {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* تنسيق السمول هيدر مع النقاط */
+.small {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* مسافة بين النقاط والنص */
+}
+
+/* الدوائر البيضاء على الجوانب */
+/* تصميم القسم الرئيسي */
+.business-plan {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.business-plan-header {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* تنسيق السمول هيدر مع التدرج */
+.small {
+  font-size: 12px;
+  font-weight: bold;
+  background: linear-gradient(to right, #EB434A, #199CB6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* مسافة بين النقاط والنص */
+}
+
+/* النقاط الملونة على الجوانب */
+.small::before {
+  content: "●";
+  font-size: 16px;
+  color: #EB434A; /* لون النقطة على اليسار */
+}
+
+.small::after {
+  content: "●";
+  font-size: 16px;
+  color: #199CB6; /* لون النقطة على اليمين */
+}
+
+
+/* تنسيق العنوان الرئيسي */
+.main-header {
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  color: #3D3D6B;
+}
+
+/* تنسيق النص التعريفي */
+.description-text {
+  font-size: 16px;
+  color: #555;
+  margin-top: 10px;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* تنسيق الكاردات */
+.business-plan-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.card {
+  background: #2C2C54;
+  color: white;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: left;
+  width: 300px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+  margin-bottom: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 350px;
+  border: 1px solid #ccc; /* إضافة خط رمادي لكل الكاردات */
+}
+
+/* لون مختلف لكارد Basic */
+.card.basic {
+  background: white;
+  color: #2C2C54;
+  border: 2px solid #2C2C54;
+}
+
+/* تغيير لون النصوص في الكارد الأبيض */
+.card.basic ul li {
+  color: #2C2C54;
+}
+
+/* تغيير لون علامات الصح في الكارد الأبيض */
+.card.basic ul li::before {
+  color: #2C2C54;
+}
+
+/* تأثير عند تحريك الماوس */
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* تنسيق العنوان */
+.card h3 {
+  font-size: 20px;
+}
+
+/* تنسيق السعر */
+.card h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.card h2 span {
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* الخط الفاصل */
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: gray;
+  margin: 10px 0 20px 0;
+}
+
+/* تنسيق القائمة */
+.card ul {
+  list-style: none;
+  padding: 0;
+  font-size: 14px;
+  color: #ddd;
+  margin-bottom: auto;
+}
+
+.card ul li {
+  font-size: 13px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+/* زر Get Started */
+.btn {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+  text-align: right;
+  width: fit-content;
+  align-self: flex-end;
+}
+
+/* زر الكارد الأبيض */
+.card.basic .btn {
+  color: #2C2C54;
+  border: 1px solid #2C2C54;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+
+/* تنسيق العنوان الرئيسي */
+.main-header {
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+/* تنسيق النص التعريفي */
+.description-text {
+  font-size: 16px;
+  color: #555;
+  margin-top: 10px;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* تنسيق الكاردات */
+.business-plan-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.card {
+  background: #2C2C54;
+  color: white;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: left;
+  width: 300px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+  margin-bottom: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 350px;
+  border: 1px solid #ccc; /* إضافة خط رمادي لكل الكاردات */
+}
+
+/* لون مختلف لكارد Basic */
+.card.basic {
+  background: white;
+  color: #2C2C54;
+  border: 2px solid #2C2C54;
+}
+
+/* تغيير لون النصوص في الكارد الأبيض */
+.card.basic ul li {
+  color: #2C2C54;
+}
+
+/* تغيير لون علامات الصح في الكارد الأبيض */
+.card.basic ul li::before {
+  color: #2C2C54;
+}
+
+/* تأثير عند تحريك الماوس */
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* تنسيق العنوان */
+.card h3 {
+  font-size: 20px;
+}
+
+/* تنسيق السعر */
+.card h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.card h2 span {
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* الخط الفاصل */
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: gray;
+  margin: 10px 0 20px 0;
+}
+
+/* تنسيق القائمة */
+.card ul {
+  list-style: none;
+  padding: 0;
+  font-size: 14px;
+  color: #ddd;
+  margin-bottom: auto;
+}
+
+.card ul li {
+  font-size: 13px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+/* زر Get Started */
+.btn {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+  text-align: right;
+  width: fit-content;
+  align-self: flex-start;
+}
+
+/* زر الكارد الأبيض */
+.card.basic .btn {
+  color: #2C2C54;
+  border: 1px solid #2C2C54;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+
+
+
+/* start project */
+
+
