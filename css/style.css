@@ -169,14 +169,18 @@ margin-bottom: 18px;
 }
 
 .col-md-6 {
-  padding-left: 20px; /* إضافة مسافة من اليسار */
-  padding-right: 20px; /* إضافة مسافة من اليمين */
+  text-align: justify;
+  direction: rtl;
+  margin: 0 auto; /* يضمن تمركز العنصر أفقيًا */
+  max-width: 50%; /* يضمن أن النص لا يكون عريضًا جدًا */
 }
+
 
 .circle-text {
   position: relative;
   padding-left: 25px;
   padding-right: 25px;
+  font-weight: normal;
 }
 
 .circle-text::before {
@@ -641,7 +645,7 @@ margin-bottom: 18px;
 
 /* تنسيق السمول هيدر مع النقاط */
 .small {
-  font-size: 12px;
+  font-size: 8px;
   color: #888;
   margin-bottom: 5px;
   display: flex;
@@ -970,3 +974,113 @@ margin-bottom: 18px;
 /* start project */
 
 
+/* تنسيق القسم بالكامل */
+.start-project {
+  background-color: #2C2C54; /* اللون الداكن للخلفية */
+  text-align: center;
+  padding: 60px 20px;
+  color: white;
+}
+
+/* تنسيق النص الصغير بالأعلى */
+.availability {
+  font-size: 8px;
+  color: white;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+/* تنسيق العنوان الرئيسي */
+.project-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* تنسيق الزر */
+.project-btn {
+  background-color: #EB434A; /* اللون الأحمر */
+  color: white;
+  font-size: 16px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.project-btn:hover {
+  background-color: #d1323a; /* لون أغمق عند التمرير */
+}
+
+
+/*footer*/
+
+.footer {
+  background-color: #1E1E3F; /* تغميق لون الخلفية */
+  padding: 50px 20px;
+  text-align: center;
+  color: white;
+}
+
+/* تنسيق الكاردات */
+.footer-container {
+  display: flex;
+  justify-content: space-between; /* توزيع الكاردات بجانب بعض */
+  gap: 30px;
+  flex-wrap: nowrap; /* عدم التفاف الكاردات إلى الأسطر التالية */
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* تصميم الكارد */
+.footer-card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  width: 450px; /* زيادة عرض الكارد */
+  text-align: left;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row; /* ترتيب العناصر بجانب بعض */
+  align-items: center;
+  height: 120px; /* تقليل ارتفاع الكارد */
+}
+
+/* تنسيق الأيقونات داخل الكارد */
+.footer-card img {
+  width: 30px; /* ضبط حجم الصورة */
+  height: auto;
+  margin-right: 15px; /* تباعد بين الصورة والنص */
+}
+
+/* تنسيق العناوين */
+.footer-card h4 {
+  font-size: 12px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+.footer-card p {
+  font-size: 10px;
+  color: #555;
+  margin: 5px 0 0 0;
+
+}
+
+/* خط فاصل بين الكاردات والجملة السفلية */
+.footer-divider {
+  width: 80%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.3);
+  margin: 30px auto;
+}
+/* حقوق النشر */
+.copyright {
+  font-size: 10px;
+  color: #aaa;
+  margin-top: 5px;
+}
