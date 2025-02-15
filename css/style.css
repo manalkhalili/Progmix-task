@@ -307,10 +307,6 @@ margin-bottom: 18px;
 
 /*webcrafts*/
 
-.main-div, .main-div *{
-  border: 0px solid #000;
-}
-
 .main-div {
   display: flex;
   flex-direction: row;
@@ -329,13 +325,18 @@ margin-bottom: 18px;
 .card {
   position: relative;
   width: 90%;
+  height: 250px;
   border: 1px solid #000;
   border-radius: 10px;
   -webkit-box-shadow: 3px 3px 10px 3px #dddddd;
   -moz-box-shadow: 3px 3px 10px 3px #dddddd;
   box-shadow: 3px 3px 10px 3px #dddddd;
-  padding:10px;
-  margin:10px;
+  padding: 20px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .icon {
@@ -343,32 +344,62 @@ margin-bottom: 18px;
   border-radius: 50%;
   height: 50px;
   width: 50px;
-  display: flex
-;
-  flex-direction: column;
-  align-content: center;
+  display: flex;
   justify-content: center;
   align-items: center;
   right: -27px;
   top: 29px;
   background: red;
 }
-.to-right{
+
+.to-right {
   text-align: right;
 }
-.to-right .icon{
-  left: -27px;
 
+.to-right .icon {
+  left: -27px;
 }
 
-.shift-right{
+.shift-right {
   margin-right: -80px;
 }
 
-.shift-left{
+.shift-left {
   margin-left: -80px;
 }
 
+.business-plan-header .main-header {
+  text-align: center;
+  font-size: 2em;
+}
+
+.business-plan-header .description-text {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+
+.image-container {
+  position: relative;
+  display: flex;
+  justify-content: center; /* توسيط أفقي */
+  align-items: center; /* توسيط عمودي */
+  height: 300px; /* تعديل الارتفاع حسب الحاجة */
+}
+
+.main-image {
+  width: 200px; /* حجم اللوجو الرئيسي */
+  transform: rotate(7deg); /* ميلان بسيط */
+}
+
+.overlay-image {
+  position: absolute;
+  width: 90px; /* تصغير الشعار */
+  bottom: 40px;  /* تحريكه للأعلى ليصبح متداخل */
+  right: 20px; /* تحريكه قليلاً ليصبح فوق اللوجو */
+  transform: rotate(-10deg); /* ميلان خفيف */
+}
 
 
 
