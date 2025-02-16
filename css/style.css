@@ -322,11 +322,10 @@ margin-bottom: 18px;
   align-items: center;
 }
 
-.card {
+.card-web {
   position: relative;
-  width: 90%;
-  height: 250px;
-  border: 1px solid #000;
+  width: 60%;
+  border: 0px solid #000;
   border-radius: 10px;
   -webkit-box-shadow: 3px 3px 10px 3px #dddddd;
   -moz-box-shadow: 3px 3px 10px 3px #dddddd;
@@ -337,6 +336,16 @@ margin-bottom: 18px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-size: .7em;
+}
+
+.card-web h5 {
+  color: #EB434A;
+  font-size: 1em;
+}
+
+.card-web .h5-blue {
+  color: #199CB6;
 }
 
 .icon {
@@ -349,13 +358,30 @@ margin-bottom: 18px;
   align-items: center;
   right: -27px;
   top: 29px;
-  background: red;
+  background: #EB434A;
 }
+
+.icon-blue{
+  position: absolute;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: -27px;
+  top: 29px;
+  background: #199CB6;
+}
+
 
 .to-right {
   text-align: right;
 }
 
+.to-right .icon-blue {
+  left: -27px;
+}
 .to-right .icon {
   left: -27px;
 }
@@ -370,38 +396,37 @@ margin-bottom: 18px;
 
 .business-plan-header .main-header {
   text-align: center;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .business-plan-header .description-text {
   text-align: center;
   max-width: 600px;
   margin: 0 auto;
+  font-size: 0.9em;
 }
-
 
 .image-container {
   position: relative;
   display: flex;
-  justify-content: center; /* توسيط أفقي */
-  align-items: center; /* توسيط عمودي */
-  height: 300px; /* تعديل الارتفاع حسب الحاجة */
+  justify-content: center;
+  align-items: center;
+  height: 350px;
 }
 
 .main-image {
-  width: 200px; /* حجم اللوجو الرئيسي */
-  transform: rotate(7deg); /* ميلان بسيط */
+  width: 300px;
+  transform: rotate(7deg);
+  margin-top: 50px;
 }
 
 .overlay-image {
   position: absolute;
-  width: 90px; /* تصغير الشعار */
-  bottom: 40px;  /* تحريكه للأعلى ليصبح متداخل */
-  right: 20px; /* تحريكه قليلاً ليصبح فوق اللوجو */
-  transform: rotate(-10deg); /* ميلان خفيف */
+  width: 130px;
+  bottom: -30px;
+  right: 50px;
+  transform: rotate(-5deg);
 }
-
-
 
 
 /*scroller*/
