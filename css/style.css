@@ -239,42 +239,44 @@
 /* تنسيق قسم الإحصائيات ليكون مطابقًا للصورة */
 .stats-section {
   display: flex;
-  justify-content: center; /* محاذاة للعناصر إلى اليسار */
+  justify-content: center; /* توسيط جميع الإحصائيات */
   align-items: center;
-  gap: 30px; /* تقليل التباعد بين الإحصائيات */
+  gap: 40px; /* تباعد متناسق بين الإحصائيات */
   text-align: left;
   width: 100%;
   margin-top: 2px;
-  padding-left: 10px; /* تقريب العناصر من الخط الأبيض */
+  padding: 10px 0;
+  flex-wrap: nowrap; /* منع نزول أي عنصر لأسفل */
 }
 
 .stats-section .stats-items {
   color: #fff;
-  padding: 3px 8px; /* تصغير المسافة الداخلية */
-  text-align: left; /* محاذاة النصوص لليسار */
-  flex: none;
+  padding: 5px 30px; /* زيادة المسافة بين النص والحدود */
+  text-align: left;
+  flex: 1; /* توزيع العناصر بالتساوي */
   display: flex;
-  flex-direction: column; /* جعل العناصر في عمود (رقم فوق، نص تحت) */
-  align-items: flex-start; /* محاذاة العناصر لليسار */
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 150px; /* تجنب نزول أي عنصر */
 }
 
 .stats-section .stats-items h3 {
   color: #EB434A;
-  font-size: 1.6rem; /* تصغير حجم الرقم */
+  font-size: 1.8rem;
   font-weight: bold;
-  margin-bottom: 3px; /* تقليل المسافة بين الرقم والنص */
+  margin-bottom: 5px;
 }
 
 .stats-section .stats-items p {
-  font-size: 0.9rem; /* تصغير حجم النص */
+  font-size: 0.7rem;
   margin: 0;
-  white-space: nowrap; /* إبقاء النص في سطر واحد */
+  white-space: nowrap;
 }
 
-/* إضافة خط فاصل بين العناصر لمنع التباعد الكبير */
+/* ضبط المسافة بين النص والخط الفاصل */
 .stats-section .stats-items:not(:first-child) {
-  border-left: 1px solid rgba(255, 255, 255, 0.5); /* خط فاصل خفيف */
-  padding-left: 12px; /* تقليل التباعد بين العناصر والخط */
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  padding-left: 70px; /* زيادة التباعد لمنع التصاق النص بالخط */
 }
 
 
@@ -429,18 +431,17 @@
 
 /*scroller*/
 
-
 .custom-portfolio {
   padding: 80px 20px;
-  text-align: center;
   position: relative;
   color: #fff;
 }
 
 .portfolio-section {
   max-width: 1200px;
-  margin: 0 auto; /* تأكد من المركز التام */
+  margin: 0 auto;
   padding: 60px 20px;
+  text-align: left;
 }
 
 .small-text {
@@ -451,6 +452,34 @@
   font-weight: normal;
   margin-bottom: 10px;
 }
+
+.portfolio-title {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.text-button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.custom-texts {
+  font-size: 14px;
+  margin-bottom: 35px;
+  line-height: 1.6;
+  text-align: left;
+  max-width: 800px;
+  font-weight: normal;
+}
+
+
+
 
 .small-text span {
   position: absolute;
@@ -471,31 +500,6 @@
   transform: translateY(-50%);
 }
 
-.portfolio-title {
-  font-size: 36px;
-  font-weight: bold;
-  text-align: left;
-  margin-top: 10px;
-}
-
-.text-button-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto; /* تأكد من المركز التام */
-  padding-left: 10%;
-}
-
-.custom-text {
-  font-size: 14px;
-  margin-bottom: 35px;
-  line-height: 1.6;
-  text-align: left;
-
-  max-width: 800px;
-  font-weight: normal;
-}
 
 .custom-button {
   background: rgba(30, 30, 70, 0.7);
