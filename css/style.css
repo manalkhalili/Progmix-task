@@ -239,34 +239,42 @@
 /* تنسيق قسم الإحصائيات ليكون مطابقًا للصورة */
 .stats-section {
   display: flex;
-  justify-content: center;
-  align-items: inherit;
-  gap: 0; /* تقليل المسافة بين العناصر */
-  text-align: right;
+  justify-content: center; /* محاذاة للعناصر إلى اليسار */
+  align-items: center;
+  gap: 30px; /* تقليل التباعد بين الإحصائيات */
+  text-align: left;
   width: 100%;
-  margin-top: 2px; /* تقليل المسافة العلوية */
+  margin-top: 2px;
+  padding-left: 10px; /* تقريب العناصر من الخط الأبيض */
 }
 
 .stats-section .stats-items {
   color: #fff;
-  padding: 1px 1px; /* تقليل المسافات الداخلية */
-  text-align: right;
-  flex: none; /* جعل العناصر تأخذ حجمها فقط دون تمدد */
+  padding: 3px 8px; /* تصغير المسافة الداخلية */
+  text-align: left; /* محاذاة النصوص لليسار */
+  flex: none;
+  display: flex;
+  flex-direction: column; /* جعل العناصر في عمود (رقم فوق، نص تحت) */
+  align-items: flex-start; /* محاذاة العناصر لليسار */
 }
 
 .stats-section .stats-items h3 {
   color: #EB434A;
-  font-size: 2rem;
-  font-weight:normal;
-  margin-bottom: 1px;
+  font-size: 1.6rem; /* تصغير حجم الرقم */
+  font-weight: bold;
+  margin-bottom: 3px; /* تقليل المسافة بين الرقم والنص */
 }
 
-
+.stats-section .stats-items p {
+  font-size: 0.9rem; /* تصغير حجم النص */
+  margin: 0;
+  white-space: nowrap; /* إبقاء النص في سطر واحد */
+}
 
 /* إضافة خط فاصل بين العناصر لمنع التباعد الكبير */
 .stats-section .stats-items:not(:first-child) {
   border-left: 1px solid rgba(255, 255, 255, 0.5); /* خط فاصل خفيف */
-  padding-left: 15px; /* تباعد بسيط */
+  padding-left: 12px; /* تقليل التباعد بين العناصر والخط */
 }
 
 
