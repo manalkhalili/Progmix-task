@@ -76,6 +76,7 @@
 
 
 /* Hero Section */
+
 .hero-section {
   position: relative;
   width: 100%;
@@ -83,8 +84,8 @@
   background: url("../img/image2.png") no-repeat center;
   background-size: cover;
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center; /* يجعل المحتوى في منتصف الصفحة عموديًا */
+  justify-content: flex-start; /* محاذاة المحتوى إلى اليسار */
   padding: 80px 10%;
   color: white;
 }
@@ -99,63 +100,58 @@
   background: rgba(30, 30, 70, 0.7); /* بنفسجي داكن مع تعتيم قوي */
   z-index: 0;
 }
-.hero-content{
+
+.hero-content {
   position: relative;
   z-index: 2;
-  max-width: 800px;
+  max-width: 700px;
   text-align: left;
-  margin-top: 130px;
 }
-
-
 
 .hero-section h1 {
   font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-  color: white !important; /* إجبار اللون الأبيض */
+  font-weight: normal;
+  margin-bottom: 15px;
+  color: white !important;
 }
 
-.highlight {
-  font-size: 48px;
-  font-weight: 700;
+.creative-text {
+  font-size: 3rem;
+  font-weight: normal;
   color: transparent;
-  -webkit-text-stroke: 1px #E74C3C; /* تحديد لون الحدود */
-  text-transform: capitalize
+  -webkit-text-stroke: 1px red;
+  text-stroke: 1px red;
 }
-
-
-
 
 .hero-section p {
-  font-size: 1.3rem;
-  font-weight: 200;
-  line-height: 1.3;
-margin-bottom: 18px;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.4;
+  margin-bottom: 20px;
   color: #ddd;
+  max-width: 600px; /* جعل الفقرة أكثر تنظيمًا */
 }
-
 
 .hero-text .btn {
   background-color: #e63946;
-  color: white !important;
-  padding: 12px 20px;
+  border: none;
+  padding: 14px 24px;
   border-radius: 50px;
   text-decoration: none;
   font-weight: normal;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   display: inline-block;
-  margin-top: 17px;
+  margin-top: 20px;
   transition: 0.3s ease-in-out;
-  min-width: 150px;
+  min-width: 170px;
   text-align: center;
 }
-
 
 .btn:hover {
   background-color: #c72e3d;
   transform: scale(1.05);
 }
+
 
 /* video&text */
 .video-section {
@@ -169,10 +165,9 @@ margin-bottom: 18px;
 }
 
 .col-md-6 {
-  text-align: justify;
-  direction: rtl;
-  margin: 0 auto; /* يضمن تمركز العنصر أفقيًا */
-  max-width: 50%; /* يضمن أن النص لا يكون عريضًا جدًا */
+  text-align: right;
+  margin: 4% auto; /* يضمن تمركز العنصر أفقيًا */
+  max-width: 40%; /* يضمن أن النص لا يكون عريضًا جدًا */
 }
 
 
@@ -188,7 +183,7 @@ margin-bottom: 18px;
 }
 
 .circle-text::after {
-  right: 53%;
+  right: 44%;
 }
 
 .circle-text::before,
@@ -244,42 +239,37 @@ margin-bottom: 18px;
 /* تنسيق قسم الإحصائيات ليكون مطابقًا للصورة */
 .stats-section {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  width: 80%;
-  margin: 50px auto;
-  padding: 20px 0;
+  justify-content: center;
+  align-items: inherit;
+  gap: 0; /* تقليل المسافة بين العناصر */
+  text-align: right;
+  width: 100%;
+  margin-top: 2px; /* تقليل المسافة العلوية */
 }
 
-.stats-item {
-  flex: 1;
+.stats-section .stats-items {
   color: #fff;
-  text-align: center;
+  padding: 1px 1px; /* تقليل المسافات الداخلية */
+  text-align: right;
+  flex: none; /* جعل العناصر تأخذ حجمها فقط دون تمدد */
 }
 
-.stats-item h3 {
+.stats-section .stats-items h3 {
   color: #EB434A;
-  font-size: 4rem; /* تكبير حجم الأرقام */
-  font-weight: bold;
-  margin-bottom: 5px;
+  font-size: 2rem;
+  font-weight:normal;
+  margin-bottom: 1px;
 }
 
-.stats-item p {
-  color: #fff;
-  font-size: 1.2rem; /* تكبير حجم النصوص أسفل الأرقام */
-  font-weight: normal;
+
+
+/* إضافة خط فاصل بين العناصر لمنع التباعد الكبير */
+.stats-section .stats-items:not(:first-child) {
+  border-left: 1px solid rgba(255, 255, 255, 0.5); /* خط فاصل خفيف */
+  padding-left: 15px; /* تباعد بسيط */
 }
 
-/* ضبط الفواصل العمودية بين العناصر */
-.stats-item:not(:last-child) {
-  border-right: 2px solid rgba(255, 255, 255, 0.5); /* جعل الخط أرق وأخف */
-  padding-right: 50px; /* إضافة تباعد مناسب */
-}
 
-.stats-item:not(:first-child) {
-  padding-left: 50px; /* إضافة تباعد من الجهة اليسرى للعناصر بعد الأول */
-}
 
 .row.mt-5 div {
   color: #fff;
